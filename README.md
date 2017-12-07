@@ -3,7 +3,13 @@
 ## Instalation
 
 Edit ~/.zshrc and add rena to the plugin list
-```plugins=(... rena)```
+
+```
+plugins=(... rena)
+```
 
 In the command line exec:
-```cd $ZSH_CUSTOM/plugins && git clone https://github.com/renalombardero/rena-oh-my-zsh-plugin.git rena && source ~/.zshrc```
+
+```
+cd $ZSH_CUSTOM/plugins && git clone https://github.com/renalombardero/rena-oh-my-zsh-plugin.git rena && source ~/.zshrc
+```
