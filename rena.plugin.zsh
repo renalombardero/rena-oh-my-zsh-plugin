@@ -1,4 +1,4 @@
-alias intip="ifconfig | grep 'inet '"
+alias intip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 alias extip="curl -s http://checkip.dyndns.org/ | sed 's/[a-zA-Z<>/ :]//g'"
 alias cd..="cd .."
 alias reload-zsh="source ~/.zshrc"
