@@ -21,3 +21,11 @@ just-offline() {
     echo "❌ ${@}"
     fi
 }
+
+pyenv() {
+    if [[ $1 == "install" ]]; then
+        command env SDKROOT="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk" CFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/readline/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include" CPPFLAGS="-I/usr/local/opt/zlib/include" LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/readline/lib" pyenv install "${@:2}"
+    else
+        command pyenv "$@"
+    fi
+}
